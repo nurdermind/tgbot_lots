@@ -1,22 +1,33 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+import aiohttp
+from bs4 import BeautifulSoup
+import re
 
-def get_current_price(url):
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
+async def fetch_page(url):
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                html = await response.text()
+                print(html)
+                return html
+    except Exception as e:
+        print(f"Error: {e}")
 
-    service = Service(executable_path='C:\\Users\\RobotComp.ru\\Documents\\webDrivers\\chromedriver-win64\\chromedriver.exe')
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+async def get_current_price(url):
+    html = await fetch_page(url)
+
+    if not html:
+        print("none")
+        return None
+
+    soup = BeautifulSoup(html, 'html.parser')
 
     try:
-        driver.get(url)
-        price_element = driver.find_element(By.XPATH, '//label[contains(text(), "Начальная цена")]/following-sibling::span//span')
-        price_text = price_element.text.strip().replace(' ', '').replace(',', '.')
-        print(f"Цена: {price_text} ₽")
-        return float(price_text)
+        price_element = soup.find('label', text="Начальная цена").find_next('span')
+        price_text = price_element.text.strip().replace(' ', '').replace(',', '.')
+
+        result = re.sub(r'[^0-9.]', '', price_text)
+        print("eroe", result)
+        return float(result)
     except Exception as e:
-        print(f"Ошибка при получении данных: {e}")
-    finally:
-        driver.quit()
+        print(f"Error parsing price from {url}: {e}")
+        return None

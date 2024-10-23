@@ -8,7 +8,6 @@ lots = {}
 def setup_bot():
     application = Application.builder().token(TELEGRAM_TOKEN).build()
 
-    # Add command handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("create_lot", create_lot))
 
