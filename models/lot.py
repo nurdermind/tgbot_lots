@@ -12,8 +12,7 @@ class Lot(Base):
     current_price = Column(Float, nullable=False)
     owner_id = Column(String, nullable=False)
 
-    # Indexes to improve performance on specific queries
     __table_args__ = (
-        Index('ix_lot_url', 'url'),  # Index on URL for fast lookup
-        Index('ix_lot_owner_id', 'owner_id'),  # Index on owner_id for quick search by owner
+        Index('ix_lot_url', 'url'),
+        Index('ix_lot_owner_id', 'owner_id'),
     )

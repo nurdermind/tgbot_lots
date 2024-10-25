@@ -4,7 +4,6 @@ from config import TELEGRAM_TOKEN
 
 lots = {}
 
-# Initialize and configure the bot
 def setup_bot():
     application = Application.builder().token(TELEGRAM_TOKEN).build()
 

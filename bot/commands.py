@@ -19,6 +19,5 @@ async def create_lot(update: Update, context: CallbackContext):
         await update.message.reply_text(f'Ошибка при добавлении лота в базу данных: {e}')
 
 
-# Async command to handle /start
 async def start(update: Update, context: CallbackContext):
     await update.message.reply_text('Привет! Используйте /create_lot <url> <название>, чтобы создать лот.')

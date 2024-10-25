@@ -16,7 +16,6 @@ async def get_current_price(url):
     html = await fetch_page(url)
 
     if not html:
-        print("none")
         return None
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -26,7 +25,7 @@ async def get_current_price(url):
         price_text = price_element.text.strip().replace(' ', '').replace(',', '.')
 
         result = re.sub(r'[^0-9.]', '', price_text)
-        print("eroe", result)
+
         return float(result)
     except Exception as e:
         print(f"Error parsing price from {url}: {e}")
