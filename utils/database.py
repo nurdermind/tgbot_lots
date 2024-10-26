@@ -52,9 +52,9 @@ def get_all_lots():
 
     return lots
 
-def update_lot_price(lot, new_price):
+def update_lot_price(session_instance, lot, new_price):
     lot.current_price = new_price
 
-    session.commit()
+    session_instance.commit()
 
     logger.info(f"Цена лота '{lot.name}' обновлена до {new_price}.")
