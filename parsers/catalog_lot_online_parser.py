@@ -39,7 +39,7 @@ async def get_current_price(url):
 
         result = re.sub(r'[^0-9.]', '', price)
 
-        return float(random.uniform(100, 200))
+        return float(result)
     except Exception as e:
         logger.error(f"Произошла ошибка при парсинге сайта {url}: {e}")
         return None
