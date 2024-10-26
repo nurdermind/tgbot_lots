@@ -7,8 +7,7 @@ from config import DATABASE_URL
 from parsers.parsers_manager import ParsersManager
 
 engine = create_engine(DATABASE_URL)
-Session = sessionmaker(bind=engine)
-session = Session()
+SessionLocal = sessionmaker(bind=engine)
 
 def check_db_connection():
     try:
@@ -21,7 +20,7 @@ def check_db_connection():
     return True
 
 if check_db_connection():
-    session = Session()
+    logger.info("Подключение к базе данных успешно установлено.")
 else:
     logger.error("Не удалось подключиться к базе данных.")
 
@@ -37,24 +36,23 @@ async def add_lot(name, url, owner_id):
         logger.error(f"Error determining price for URL '{url}': {e}")
         raise
 
-    new_lot = Lot(name=name, url=url, current_price=initial_price, owner_id=owner_id)
-    session.add(new_lot)
-    session.commit()
+    with SessionLocal() as session:
+        new_lot = Lot(name=name, url=url, current_price=initial_price, owner_id=owner_id)
+        session.add(new_lot)
+        session.commit()
 
-    logger.info(f"Лот '{name}' с URL '{url}' успешно добавлен в базу данных.")
+        logger.info(f"Лот '{name}' с URL '{url}' успешно добавлен в базу данных.")
 
     return new_lot
 
 def get_all_lots():
-    lots = session.query(Lot).all()
-
-    logger.info(f"Получено {len(lots)} лотов из базы данных.")
-
+    with SessionLocal() as session:
+        lots = session.query(Lot).all()
+        logger.info(f"Получено {len(lots)} лотов из базы данных.")
     return lots
 
 def update_lot_price(session_instance, lot, new_price):
     lot.current_price = new_price
-
-    session_instance.commit()
-
+    session_instance.add(lot)  # Явно добавляем в сессию
+    session_instance.commit()  # Фиксируем изменения
     logger.info(f"Цена лота '{lot.name}' обновлена до {new_price}.")

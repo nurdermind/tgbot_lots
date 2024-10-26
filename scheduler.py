@@ -1,35 +1,50 @@
-import time
 from sqlalchemy.orm import sessionmaker
 from utils.database import get_all_lots, update_lot_price, engine
 from parsers.parsers_manager import ParsersManager
 from logger_config import logger
 import asyncio
+from utils.notifier import send_telegram_message
 
 manager = ParsersManager()
 SessionLocal = sessionmaker(bind=engine)
 
-async def parse_lot(lot):
-    session = SessionLocal()
+lots_cache = {}
 
+def load_lots_to_cache():
+    global lots_cache
+    lots = get_all_lots()
+    lots_cache = {lot.id: lot for lot in lots}
+
+async def parse_lot(session, lot_id):
     try:
+        lot = session.query(type(lots_cache[lot_id])).get(lot_id)
+
         new_price = await manager.get_price(lot.url)
+        print(new_price, lot.current_price)
         if new_price is not None and new_price != lot.current_price:
             update_lot_price(session, lot, new_price)
-            logger.info(f"Updated price for {lot.name} to {new_price}.")
+            lots_cache[lot.id].current_price = new_price
+            logger.info(f"Updated price for {lot.id} to {new_price}.")
+
+            message = f"Цена лота, который находится по ссылке '{lot.url}' изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
+            await send_telegram_message(lot.owner_id, message)
         else:
-            logger.info(f"No price change for {lot.name}.")
+            logger.info(f"No price change for {lot.id}.")
     except Exception as e:
-        logger.error(f"Error parsing lot {lot.name}: {e}")
+        logger.error(f"Error parsing lot {lot_id}: {e}")
         session.rollback()
     finally:
-        session.close()
+        session.commit()
+
 
 async def scheduled_task():
-    lots = get_all_lots()
-    tasks = [parse_lot(lot) for lot in lots]
-    await asyncio.gather(*tasks)
+    while True:
+        with SessionLocal() as session:
+            tasks = [parse_lot(session, lot_id) for lot_id in lots_cache.keys()]
+            await asyncio.gather(*tasks)
+        await asyncio.sleep(1)
+
 
 def run_scheduler():
-    while True:
-        asyncio.run(scheduled_task())
-        time.sleep(1)
+    load_lots_to_cache()
+    asyncio.run(scheduled_task())

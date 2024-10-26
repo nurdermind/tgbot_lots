@@ -1,5 +1,4 @@
 from parsers.catalog_lot_online_parser import get_current_price as get_current_price_catalog_lot_online
-import asyncio
 
 class ParsersManager:
     def __init__(self):
