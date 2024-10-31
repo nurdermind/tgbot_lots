@@ -29,26 +29,17 @@ def init_db():
     logger.info("Схема базы данных инициализирована.")
 
 async def add_lot(name, url, owner_id):
-    manager = ParsersManager()
-    try:
-        initial_price = await manager.get_price(url)
-    except ValueError as e:
-        logger.error(f"Error determining price for URL '{url}': {e}")
-        raise
-
     with SessionLocal() as session:
+        manager = ParsersManager()
+        initial_price = await manager.get_price(url)
         new_lot = Lot(name=name, url=url, current_price=initial_price, owner_id=owner_id)
         session.add(new_lot)
         session.commit()
-
-        logger.info(f"Лот '{name}' с URL '{url}' успешно добавлен в базу данных.")
-
-    return new_lot
+        return new_lot.id
 
 def get_all_lots():
     with SessionLocal() as session:
         lots = session.query(Lot).all()
-        logger.info(f"Получено {len(lots)} лотов из базы данных.")
     return lots
 
 def update_lot_price(session_instance, lot, new_price):

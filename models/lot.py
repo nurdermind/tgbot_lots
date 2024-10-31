@@ -9,7 +9,7 @@ class Lot(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     url = Column(String, nullable=False, unique=True)
-    current_price = Column(Float, nullable=False)
+    current_price = Column(String, nullable=False)
     owner_id = Column(String, nullable=False)
 
     __table_args__ = (

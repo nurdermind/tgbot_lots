@@ -1,6 +1,9 @@
 from telegram import Update
 from telegram.ext import CallbackContext
 from utils.database import add_lot
+from scheduler import lots_cache
+from models.lot import Lot
+from utils.database import SessionLocal
 
 async def create_lot(update: Update, context: CallbackContext):
     if len(context.args) < 2:
@@ -9,15 +12,20 @@ async def create_lot(update: Update, context: CallbackContext):
 
     url = context.args[0]
     name = context.args[1]
-
     owner_id = str(update.message.chat_id)
 
     try:
-        await add_lot(name, url, owner_id)
+        lot_id  = await add_lot(name, url, owner_id)
+
+        with SessionLocal() as session:
+            new_lot = session.query(Lot).get(lot_id)
+            lots_cache[lot_id] = new_lot
+
         await update.message.reply_text(f'Лот "{name}" с URL "{url}" создан и добавлен в базу данных.')
     except Exception as e:
         await update.message.reply_text(f'Ошибка при добавлении лота в базу данных: {e}')
+        raise Exception(f'Ошибка при добавлении лота в базу данных: {e}')
 
 
-async def start(update: Update, context: CallbackContext):
+async def start(update: Update, _: CallbackContext):
     await update.message.reply_text('Привет! Используйте /create_lot <url> <название>, чтобы создать лот.')

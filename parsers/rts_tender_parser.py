@@ -5,12 +5,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import re
 from logger_config import logger
+import re
+
 
 def fetch_page_with_selenium(url):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
     driver = webdriver.Chrome(options=options)
 
     stealth(driver,
@@ -25,8 +30,11 @@ def fetch_page_with_selenium(url):
     driver.get(url)
 
     try:
-        WebDriverWait(driver, 40).until(
-            EC.text_to_be_present_in_element((By.ID, "currentOffer"), "")
+        time.sleep(10)
+
+        WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "td[aria-describedby='jqgLots_BestApplicationQuotationStr']"))
         )
 
         html = driver.page_source
@@ -36,26 +44,30 @@ def fetch_page_with_selenium(url):
     return html
 
 def clean_price(price_text):
-    return re.sub(r'[^0-9.]', '', price_text)
+    price_text = re.sub(r'[^0-9.]', '', price_text)
+    if price_text.endswith('.'):
+        price_text = price_text[:-1]
+    return price_text
 
 async def get_current_price(url):
     html = fetch_page_with_selenium(url)
 
     if not html:
-        logger.error("Не удалось загрузить страницу.")
         return None
 
     soup = BeautifulSoup(html, 'html.parser')
 
     try:
-        offer_element = soup.find('strong', {'id': 'currentOffer'})
-        print(offer_element)
-        if offer_element and offer_element.text.strip():  # Проверяем, что текст непустой
-            offer_text = offer_element.text.strip().replace(' ', '').replace('RUB', '').replace(',', '.')
-            return clean_price(offer_text)
+        price_element = soup.find('td', {'aria-describedby': 'jqgLots_BestApplicationQuotationStr'})
+
+        if price_element and price_element.get('title'):
+            price_text = price_element['title'].strip().replace(' ', '').replace(',', '.')
+            price_text = clean_price(price_text)
         else:
-            logger.warning(f'Нет информации о текущем предложении для {url}')
+            logger.warning(f'Нет текущей цены для {url}')
             return None
+
+        return price_text if price_text else None
     except Exception as e:
-        logger.error(f"Произошла ошибка при парсинге сайта {url}: {e}")
+        logger.error(f"Произошла ошибка при парсинге цены с {url}: {e}")
         return None

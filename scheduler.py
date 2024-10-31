@@ -20,13 +20,15 @@ async def parse_lot(session, lot_id):
         lot = session.query(type(lots_cache[lot_id])).get(lot_id)
 
         new_price = await manager.get_price(lot.url)
-        print(new_price, lot.current_price)
+
         if new_price is not None and new_price != lot.current_price:
+            message = f"Цена лота, который находится по ссылке '{lot.url}' изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
+
             update_lot_price(session, lot, new_price)
+
             lots_cache[lot.id].current_price = new_price
             logger.info(f"Updated price for {lot.id} to {new_price}.")
 
-            message = f"Цена лота, который находится по ссылке '{lot.url}' изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
             await send_telegram_message(lot.owner_id, message)
         else:
             logger.info(f"No price change for {lot.id}.")
@@ -39,10 +41,13 @@ async def parse_lot(session, lot_id):
 
 async def scheduled_task():
     while True:
+        load_lots_to_cache()
+
         with SessionLocal() as session:
             tasks = [parse_lot(session, lot_id) for lot_id in lots_cache.keys()]
             await asyncio.gather(*tasks)
-        await asyncio.sleep(1)
+
+        await asyncio.sleep(5)
 
 
 def run_scheduler():
