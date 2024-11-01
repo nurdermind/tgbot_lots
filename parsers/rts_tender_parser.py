@@ -59,7 +59,7 @@ async def get_current_price(url):
 
     try:
         price_element = soup.find('td', {'aria-describedby': 'jqgLots_BestApplicationQuotationStr'})
-
+        print(price_element)
         if price_element and price_element.get('title'):
             price_text = price_element['title'].strip().replace(' ', '').replace(',', '.')
             price_text = clean_price(price_text)

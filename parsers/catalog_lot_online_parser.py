@@ -26,7 +26,7 @@ def fetch_page_with_selenium(url):
 
     try:
         WebDriverWait(driver, 40).until(
-            EC.text_to_be_present_in_element((By.ID, "currentOffer"), "")
+            lambda driver: driver.find_element(By.ID, "currentOffer").text.strip() != ""
         )
 
         html = driver.page_source
