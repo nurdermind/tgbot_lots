@@ -1,0 +1,5 @@
+selenium
+selenium-stealth
+python-telegram-bot
+SQLAlchemy
+beautifulsoup4
