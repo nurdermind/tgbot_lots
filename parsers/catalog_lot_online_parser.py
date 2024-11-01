@@ -9,6 +9,10 @@ from logger_config import logger
 def fetch_page_with_selenium(url):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--remote-debugging-port=9222")
     driver = webdriver.Chrome(options=options)
 
     stealth(driver,
@@ -48,7 +52,7 @@ async def get_current_price(url):
     try:
         offer_element = soup.find('strong', {'id': 'currentOffer'})
         print(offer_element)
-        if offer_element and offer_element.text.strip():  # Проверяем, что текст непустой
+        if offer_element and offer_element.text.strip():
             offer_text = offer_element.text.strip().replace(' ', '').replace('RUB', '').replace(',', '.')
             return clean_price(offer_text)
         else:
