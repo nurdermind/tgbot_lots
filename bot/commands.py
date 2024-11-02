@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext
-from utils.database import add_lot
+from utils.database import add_lot, delete_lot_from_db
 from scheduler import lots_cache
 from models.lot import Lot
 from utils.database import SessionLocal
@@ -25,6 +25,18 @@ async def create_lot(update: Update, context: CallbackContext):
     except Exception as e:
         await update.message.reply_text(f'Ошибка при добавлении лота в базу данных: {e}')
         raise Exception(f'Ошибка при добавлении лота в базу данных: {e}')
+
+
+async def delete_lot(update: Update, context: CallbackContext):
+    if not context.args:
+        await update.message.reply_text("Используйте: /delete <ID лота>")
+        return
+
+    lot_id = context.args[0]
+    if delete_lot_from_db(lot_id):
+        await update.message.reply_text(f'Лот с ID {lot_id} успешно удален.')
+    else:
+        await update.message.reply_text(f'Лот с ID {lot_id} не найден.')
 
 
 async def start(update: Update, _: CallbackContext):

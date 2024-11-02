@@ -37,6 +37,21 @@ async def add_lot(name, url, owner_id):
         session.commit()
         return new_lot.id
 
+def delete_lot_from_db(lot_id):
+    from scheduler import lots_cache
+    
+    with SessionLocal() as session:
+        lot = session.query(Lot).get(lot_id)
+        if lot:
+            session.delete(lot)
+            session.commit()
+            lots_cache.pop(lot_id, None)
+            logger.info(f"Лот с ID {lot_id} успешно удален.")
+            return True
+        else:
+            logger.warning(f"Лот с ID {lot_id} не найден в базе данных.")
+            return False
+
 def get_all_lots():
     with SessionLocal() as session:
         lots = session.query(Lot).all()
@@ -44,6 +59,6 @@ def get_all_lots():
 
 def update_lot_price(session_instance, lot, new_price):
     lot.current_price = new_price
-    session_instance.add(lot)  # Явно добавляем в сессию
-    session_instance.commit()  # Фиксируем изменения
+    session_instance.add(lot)
+    session_instance.commit()
     logger.info(f"Цена лота '{lot.name}' обновлена до {new_price}.")
