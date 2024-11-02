@@ -52,6 +52,11 @@ def delete_lot_from_db(lot_id):
             logger.warning(f"Лот с ID {lot_id} не найден в базе данных.")
             return False
 
+def get_all_lots_ids_and_urls():
+    with SessionLocal() as session:
+        lots = session.query(Lot.id, Lot.url).all()
+    return lots
+
 def get_all_lots():
     with SessionLocal() as session:
         lots = session.query(Lot).all()

@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext
-from utils.database import add_lot, delete_lot_from_db
+from utils.database import add_lot, delete_lot_from_db, get_all_lots_ids_and_urls
 from scheduler import lots_cache
 from models.lot import Lot
 from utils.database import SessionLocal
@@ -37,6 +37,15 @@ async def delete_lot(update: Update, context: CallbackContext):
         await update.message.reply_text(f'Лот с ID {lot_id} успешно удален.')
     else:
         await update.message.reply_text(f'Лот с ID {lot_id} не найден.')
+
+async def all_lots(update: Update, context: CallbackContext):
+    lots = get_all_lots_ids_and_urls()
+    if not lots:
+        await update.message.reply_text("Нет доступных лотов.")
+        return
+    
+    message = "\n".join([f"ID: {lot.id}, URL: {lot.url}" for lot in lots])
+    await update.message.reply_text(message)
 
 
 async def start(update: Update, _: CallbackContext):
