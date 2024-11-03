@@ -10,3 +10,11 @@ if not TELEGRAM_TOKEN:
 DATABASE_URL = os.getenv('DATABASE_URL')
 if not DATABASE_URL:
     raise ValueError("No DATABASE_URL set for the database connection")
+
+CALLER_API_KEY = os.getenv('CALLER_API_KEY')
+if not CALLER_API_KEY:
+    raise ValueError("No CALLER_API_KEY set for Telegram bot")
+
+CAMPAIGN_ID = os.getenv('CAMPAIGN_ID')
+if not CAMPAIGN_ID:
+    raise ValueError("No CAMPAIGN_ID set for the database connection")

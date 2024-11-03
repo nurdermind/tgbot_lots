@@ -5,6 +5,7 @@ from sqlalchemy.exc import OperationalError
 from models.lot import Base, Lot
 from config import DATABASE_URL
 from parsers.parsers_manager import ParsersManager
+import asyncio
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
@@ -28,11 +29,11 @@ def init_db():
     Base.metadata.create_all(engine)
     logger.info("Схема базы данных инициализирована.")
 
-async def add_lot(name, url, owner_id):
+async def add_lot(url, owner_id):
     with SessionLocal() as session:
         manager = ParsersManager()
         initial_price = await manager.get_price(url)
-        new_lot = Lot(name=name, url=url, current_price=initial_price, owner_id=owner_id)
+        new_lot = Lot(url=url, current_price=initial_price, owner_id=owner_id)
         session.add(new_lot)
         session.commit()
         return new_lot.id
@@ -62,8 +63,17 @@ def get_all_lots():
         lots = session.query(Lot).all()
     return lots
 
-def update_lot_price(session_instance, lot, new_price):
-    lot.current_price = new_price
-    session_instance.add(lot)
-    session_instance.commit()
-    logger.info(f"Цена лота '{lot.name}' обновлена до {new_price}.")
+async def update_lot_price_async(lot, new_price):
+    loop = asyncio.get_running_loop()
+    await loop.run_in_executor(None, update_lot_price, lot, new_price)
+
+def update_lot_price(lot, new_price):
+    with SessionLocal() as session:
+        lot = session.query(Lot).get(lot.id)
+        if lot:
+            lot.current_price = new_price
+            session.add(lot)
+            session.commit()
+            logger.info(f"Цена лота '{lot.id}' обновлена до {new_price}.")
+        else:
+            logger.error(f"Лот с ID {lot_id} не найден для обновления.")

@@ -32,7 +32,6 @@ def fetch_page_with_selenium(url):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36")
-
     prefs = {"profile.managed_default_content_settings.images": 2,
              "profile.managed_default_content_settings.stylesheets": 2,
              "profile.managed_default_content_settings.javascript": 1}
@@ -87,7 +86,7 @@ async def get_current_price(url):
     match = re.search(r"<BidLastPriceOffer>([\d,.]+)</BidLastPriceOffer>", html)
     if match:
         price_text = match.group(1).replace(',', '.')
-        print(price_text)
+        
         return price_text
     else:
         logger.warning(f'Нет текущей цены для {url}')

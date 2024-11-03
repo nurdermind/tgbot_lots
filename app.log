@@ -1,0 +1,651 @@
+2024-11-03 00:13:07,343 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 00:13:07,343 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 00:17:21,337 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 00:17:21,337 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 00:25:15,598 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 00:25:15,598 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 00:37:20,097 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 00:37:20,097 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 00:41:10,165 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 00:41:10,165 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 00:41:27,042 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 01:05:10,334 - ERROR - Error parsing lot 1: No parser available for URL: asd
+2024-11-03 01:05:16,606 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 01:05:16,606 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 01:05:16,701 - ERROR - Error parsing lot 1: No parser available for URL: asd
+2024-11-03 01:05:21,709 - ERROR - Error parsing lot 1: No parser available for URL: asd
+2024-11-03 01:05:26,717 - ERROR - Error parsing lot 1: No parser available for URL: asd
+2024-11-03 01:05:28,910 - INFO - Лот с ID 1 успешно удален.
+2024-11-03 01:08:41,952 - ERROR - Error parsing lot 2: No parser available for URL: uio
+2024-11-03 01:08:46,969 - ERROR - Error parsing lot 2: No parser available for URL: uio
+2024-11-03 01:08:51,975 - ERROR - Error parsing lot 2: No parser available for URL: uio
+2024-11-03 01:08:56,983 - ERROR - Error parsing lot 2: No parser available for URL: uio
+2024-11-03 01:09:01,991 - ERROR - Error parsing lot 2: No parser available for URL: uio
+2024-11-03 01:09:04,138 - INFO - Лот с ID 2 успешно удален.
+2024-11-03 01:09:21,230 - WARNING - Лот с ID 1 не найден в базе данных.
+2024-11-03 01:20:16,709 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 01:20:16,709 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 01:20:30,163 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 01:20:30,163 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 01:21:10,308 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:15,315 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:20,322 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:25,329 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:30,358 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:30,360 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:21:35,368 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:35,369 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:21:40,377 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:40,378 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:21:45,384 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:45,386 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:21:50,393 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:50,394 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:21:55,393 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 01:21:55,393 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 01:21:55,529 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:21:55,531 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:22:00,539 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:22:00,540 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:22:05,548 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:22:05,549 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:22:10,556 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:22:10,557 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:41:44,904 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 01:41:44,904 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 01:41:45,006 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:41:45,007 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:41:50,014 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:41:50,015 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:41:55,022 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:41:55,023 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:42:00,029 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:42:00,031 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:42:05,038 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:42:05,039 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:42:10,046 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:42:10,047 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 01:42:15,054 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 01:42:15,055 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:06:39,098 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:06:39,098 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:06:39,187 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:06:39,188 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:06:44,199 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:06:44,202 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:06:49,212 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:06:49,215 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:06:54,226 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:06:54,230 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:06:59,240 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:06:59,243 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:04,251 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:04,252 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:09,260 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:09,263 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:14,273 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:14,276 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:19,286 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:19,289 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:24,296 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:24,297 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:29,304 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:29,306 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:34,314 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:34,315 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:39,324 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:39,325 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:44,333 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:44,334 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:49,342 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:49,343 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:54,351 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:54,353 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:07:59,360 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:07:59,362 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:04,372 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:04,375 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:09,387 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:09,390 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:14,398 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:14,399 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:17,429 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:08:17,429 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:08:17,578 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:17,581 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:22,592 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:22,595 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:27,606 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:27,608 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:32,619 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:32,622 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:37,632 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:37,635 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:42,646 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:42,649 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:47,658 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:47,660 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:52,670 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:52,673 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:08:57,681 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:08:57,682 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:02,691 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:02,694 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:07,704 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:07,707 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:12,716 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:12,718 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:17,728 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:17,732 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:22,740 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:22,741 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:28,039 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:09:28,039 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:09:28,132 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:28,133 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:33,143 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:33,146 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:38,154 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:38,156 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:43,166 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:43,169 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:48,177 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:48,178 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:09:53,189 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:09:53,193 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:05,434 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:10:05,434 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:10:05,528 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:10:05,530 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:10,540 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:10:10,543 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:12,027 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 20:10:12,029 - ERROR - Ошибка уникальности: (psycopg2.errors.NotNullViolation) null value in column "current_price" of relation "lots" violates not-null constraint
+DETAIL:  Failing row contains (3, name, https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951, null, 942783339).
+
+[SQL: INSERT INTO lots (name, url, current_price, owner_id) VALUES (%(name)s, %(url)s, %(current_price)s, %(owner_id)s) RETURNING lots.id]
+[parameters: {'name': 'name', 'url': 'https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951', 'current_price': None, 'owner_id': '942783339'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-03 20:10:15,555 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:10:15,558 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:20,568 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:10:20,571 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:25,582 - ERROR - Error parsing lot 2: No parser available for URL: asd
+2024-11-03 20:10:25,585 - ERROR - Error parsing lot 4: No parser available for URL: aasfsd
+2024-11-03 20:10:31,953 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:10:31,954 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:10:39,545 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 20:10:39,548 - ERROR - Ошибка уникальности: (psycopg2.errors.NotNullViolation) null value in column "current_price" of relation "lots" violates not-null constraint
+DETAIL:  Failing row contains (4, name, https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951, null, 942783339).
+
+[SQL: INSERT INTO lots (name, url, current_price, owner_id) VALUES (%(name)s, %(url)s, %(current_price)s, %(owner_id)s) RETURNING lots.id]
+[parameters: {'name': 'name', 'url': 'https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951', 'current_price': None, 'owner_id': '942783339'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-03 20:11:45,472 - INFO - No price change for 5.
+2024-11-03 20:11:58,534 - INFO - No price change for 5.
+2024-11-03 20:12:12,026 - INFO - No price change for 5.
+2024-11-03 20:12:24,506 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:12:24,506 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:12:31,842 - INFO - No price change for 5.
+2024-11-03 20:12:44,952 - INFO - No price change for 5.
+2024-11-03 20:12:57,832 - INFO - No price change for 5.
+2024-11-03 20:13:11,173 - INFO - No price change for 5.
+2024-11-03 20:13:33,352 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:13:33,352 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:13:41,181 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:13:41,181 - INFO - Updated price for 5 to 1.
+2024-11-03 20:13:41,181 - ERROR - Error parsing lot 5: Bot.send_message() got an unexpected keyword argument 'timeout'
+2024-11-03 20:13:54,376 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:13:54,376 - INFO - Updated price for 5 to 1.
+2024-11-03 20:13:54,377 - ERROR - Error parsing lot 5: Bot.send_message() got an unexpected keyword argument 'timeout'
+2024-11-03 20:14:00,026 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:14:00,026 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:14:07,469 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:14:07,469 - INFO - Updated price for 5 to 1.
+2024-11-03 20:14:07,469 - ERROR - Error parsing lot 5: Bot.send_message() got an unexpected keyword argument 'timeout'
+2024-11-03 20:14:48,909 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:14:48,910 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:14:56,238 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:14:56,239 - INFO - Updated price for 5 to 1.
+2024-11-03 20:15:09,184 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:15:09,184 - INFO - Updated price for 5 to 1.
+2024-11-03 20:20:45,821 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:20:45,821 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:20:59,099 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:21:13,229 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:23:12,037 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:23:12,037 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:23:20,546 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:23:26,512 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 20:26:25,183 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:26:25,183 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:26:33,302 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:26:46,708 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:28:44,714 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:28:44,714 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:28:53,010 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:29:27,717 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:29:27,717 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:29:35,930 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:30:26,267 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:30:26,267 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:30:34,377 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:40:32,994 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:40:32,995 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:40:52,562 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:40:52,562 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:40:59,971 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:41:00,433 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 20:41:13,280 - INFO - Цена лота 'name' обновлена до 1.
+2024-11-03 20:41:13,832 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 20:43:12,957 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 20:43:12,958 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 20:43:14,098 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:07:14,569 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:07:14,570 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:07:21,371 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:07:21,371 - INFO - No price change for 5.
+2024-11-03 21:07:32,152 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:07:32,152 - INFO - No price change for 5.
+2024-11-03 21:07:42,896 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:07:42,897 - INFO - No price change for 5.
+2024-11-03 21:07:53,616 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:07:53,617 - INFO - No price change for 5.
+2024-11-03 21:08:04,322 - ERROR - Error parsing lot 5: HTTPConnectionPool(host='localhost', port=36875): Max retries exceeded with url: /session/2ccbb46e4b508f87bfa3858130a4bf9b/cookie (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x701ca7e96d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-11-03 21:08:06,415 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:08:06,415 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:08:07,009 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:12,606 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:18,208 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:23,775 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:29,341 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:34,924 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:40,536 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:08:46,101 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:09:47,273 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:09:47,273 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:09:48,008 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:09:53,806 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:10:26,856 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:10:26,856 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:10:27,595 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:11:22,691 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:11:22,691 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:11:23,447 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:11:47,204 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:11:47,205 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:11:47,928 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:12:17,075 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:12:17,075 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:12:19,276 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:12:33,877 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:12:33,877 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:12:34,583 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:12:42,393 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:12:42,393 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:12:43,101 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:12:49,812 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:12:49,812 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:12:51,345 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:12:56,524 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:12:56,524 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:12:57,340 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:13:04,883 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:13:04,883 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:13:07,202 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:13:38,798 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:13:38,798 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:13:39,569 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:13:48,352 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:13:48,352 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:13:49,068 - ERROR - Error parsing lot 5: Ran out of input
+2024-11-03 21:14:17,369 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:14:17,369 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:14:18,183 - WARNING - Файл с cookies не найден
+2024-11-03 21:14:23,421 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:14:23,421 - INFO - No price change for 5.
+2024-11-03 21:14:36,298 - ERROR - Error parsing lot 5: update_lot_price_async() takes 2 positional arguments but 3 were given
+2024-11-03 21:14:43,383 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:18:37,381 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:18:37,382 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:18:46,586 - ERROR - Error parsing lot 5: Object '<Lot at 0x7832ded49b50>' is already attached to session '3' (this is '4')
+2024-11-03 21:19:00,728 - ERROR - Error parsing lot 5: Object '<Lot at 0x7832de321220>' is already attached to session '6' (this is '7')
+2024-11-03 21:19:04,705 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:19:04,705 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:19:12,565 - ERROR - Error parsing lot 5: Object '<Lot at 0x7f6fe8dcde20>' is already attached to session '3' (this is '4')
+2024-11-03 21:19:17,724 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:20:16,368 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:20:16,369 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:20:25,309 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:20:25,609 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:20:32,691 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:27:03,949 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:27:03,949 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:27:11,733 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:27:11,747 - INFO - Цена лота '5' обновлена до 9999999999999999.99.
+2024-11-03 21:27:12,079 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:27:19,444 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:27:27,890 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:27:27,890 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:27:37,079 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:27:37,080 - INFO - No price change for 5.
+2024-11-03 21:27:50,672 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:27:50,673 - INFO - No price change for 5.
+2024-11-03 21:28:04,604 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:28:04,604 - INFO - No price change for 5.
+2024-11-03 21:28:18,235 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:28:18,235 - INFO - No price change for 5.
+2024-11-03 21:28:32,146 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:28:32,146 - INFO - No price change for 5.
+2024-11-03 21:28:46,136 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:28:46,136 - INFO - No price change for 5.
+2024-11-03 21:28:59,793 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:28:59,793 - INFO - No price change for 5.
+2024-11-03 21:29:13,835 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:29:13,836 - INFO - No price change for 5.
+2024-11-03 21:29:26,983 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:29:26,984 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:29:35,919 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:29:35,919 - INFO - No price change for 5.
+2024-11-03 21:29:41,744 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:29:41,744 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:29:49,474 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:29:49,488 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:29:49,891 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:30:03,941 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:30:03,946 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:30:04,224 - ERROR - Ошибка при отправке звонка: 429 Client Error: Too Many Requests for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 21:30:18,811 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:30:18,815 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:30:19,087 - ERROR - Ошибка при отправке звонка: 429 Client Error: Too Many Requests for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 21:35:48,076 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:35:48,077 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:35:56,868 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:35:56,885 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:35:57,127 - ERROR - Ошибка при отправке звонка: 429 Client Error: Too Many Requests for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 21:38:32,105 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:38:32,106 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:38:32,277 - INFO - Лоты загружены в кэш
+2024-11-03 21:38:32,281 - INFO - Лоты загружены в кэш
+2024-11-03 21:38:40,984 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:38:40,990 - INFO - Цена лота '5' обновлена до 9999999999999999.99.
+2024-11-03 21:38:41,269 - ERROR - Ошибка при отправке звонка: 429 Client Error: Too Many Requests for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 21:38:41,270 - INFO - Звонок отправлен для лота 5.
+2024-11-03 21:38:46,611 - INFO - Лоты загружены в кэш
+2024-11-03 21:38:48,687 - ERROR - Ошибка при обработке лота 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 21:44:23,345 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:44:23,345 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:44:23,494 - INFO - Лоты загружены в кэш
+2024-11-03 21:44:23,495 - INFO - Лоты загружены в кэш
+2024-11-03 21:44:32,338 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:44:32,338 - INFO - Цена для лота 5 не изменилась.
+2024-11-03 21:44:37,346 - INFO - Лоты загружены в кэш
+2024-11-03 21:44:58,307 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 21:44:58,307 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 21:44:58,520 - INFO - Лоты загружены в кэш
+2024-11-03 21:44:58,525 - INFO - Лоты загружены в кэш
+2024-11-03 21:45:06,456 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:45:06,462 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:45:06,818 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:45:06,819 - INFO - Звонок отправлен для лота 5.
+2024-11-03 21:45:12,187 - INFO - Лоты загружены в кэш
+2024-11-03 21:45:20,987 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:45:20,991 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:45:21,334 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:45:21,334 - INFO - Звонок отправлен для лота 5.
+2024-11-03 21:45:26,869 - INFO - Лоты загружены в кэш
+2024-11-03 21:45:34,364 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 21:45:34,370 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 21:45:34,788 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 21:45:34,789 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:25:52,955 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:25:52,955 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:25:53,124 - INFO - Лоты загружены в кэш
+2024-11-03 23:25:53,126 - INFO - Лоты загружены в кэш
+2024-11-03 23:26:02,741 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:26:02,750 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:26:03,214 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:26:03,214 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:26:08,560 - INFO - Лоты загружены в кэш
+2024-11-03 23:26:17,744 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:26:17,750 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:26:18,220 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:26:18,221 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:26:23,666 - INFO - Лоты загружены в кэш
+2024-11-03 23:26:32,684 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:26:32,692 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:26:32,978 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:26:32,979 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:26:38,334 - INFO - Лоты загружены в кэш
+2024-11-03 23:26:47,479 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:26:47,482 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:26:47,846 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:26:47,847 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:26:53,237 - INFO - Лоты загружены в кэш
+2024-11-03 23:27:03,153 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:27:03,156 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:27:03,459 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:27:03,460 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:27:08,913 - INFO - Лоты загружены в кэш
+2024-11-03 23:27:09,705 - ERROR - Ошибка при обработке лота 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 23:27:31,715 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:27:31,715 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:27:31,873 - INFO - Лоты загружены в кэш
+2024-11-03 23:27:31,878 - INFO - Лоты загружены в кэш
+2024-11-03 23:27:40,073 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:27:40,079 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:27:40,414 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:27:40,415 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:27:45,910 - INFO - Лоты загружены в кэш
+2024-11-03 23:30:05,313 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:30:05,314 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:30:05,428 - INFO - Лоты загружены в кэш
+2024-11-03 23:30:05,435 - INFO - Лоты загружены в кэш
+2024-11-03 23:30:14,184 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:30:14,190 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:30:14,528 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:30:14,529 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:30:19,870 - INFO - Лоты загружены в кэш
+2024-11-03 23:30:28,350 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:30:28,353 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:30:28,727 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:30:28,728 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:30:34,197 - INFO - Лоты загружены в кэш
+2024-11-03 23:30:43,083 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:30:43,089 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:30:43,494 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:30:43,494 - INFO - Звонок отправлен для лота 5.
+2024-11-03 23:31:19,873 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:31:19,874 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:31:28,817 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:31:28,830 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:31:29,151 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:31:43,128 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:31:43,135 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:31:43,474 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:32:02,765 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:32:02,773 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:32:03,081 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:32:16,314 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:32:16,320 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:32:16,909 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:33:34,899 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:33:34,900 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:33:43,359 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:33:43,372 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:33:43,655 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:34:18,597 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:34:18,597 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:34:26,172 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:34:26,185 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:34:26,515 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:34:39,185 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:34:39,186 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:34:46,841 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:34:46,855 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:34:47,187 - INFO - Звонок успешно отправлен на номер 79871169415
+2024-11-03 23:36:28,312 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:36:28,312 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:36:37,333 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:36:37,348 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:36:37,678 - ERROR - Error parsing lot 5: 'status'
+2024-11-03 23:36:45,357 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 23:36:53,664 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:36:53,664 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:37:03,229 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:37:03,252 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:37:03,538 - ERROR - Error parsing lot 5: 'status'
+2024-11-03 23:37:30,302 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:37:30,302 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:37:38,151 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:37:38,164 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:37:38,487 - ERROR - Error parsing lot 5: 'status'
+2024-11-03 23:39:01,915 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:39:01,916 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:39:11,100 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:39:11,115 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:39:11,502 - ERROR - Error parsing lot 5: 'status'
+2024-11-03 23:39:44,287 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:39:44,287 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:39:52,902 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:39:52,916 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:39:53,243 - ERROR - Error parsing lot 5: 'status'
+2024-11-03 23:39:59,863 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 23:42:05,672 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:42:05,672 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:42:15,715 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:42:15,740 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:42:16,023 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 2411031871094541
+2024-11-03 23:42:24,344 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-03 23:43:33,820 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:43:33,821 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:43:44,156 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:43:44,193 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:43:44,556 - ERROR - Ошибка при отправке звонка: 401 Client Error: Unauthorized for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 23:44:00,662 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:44:00,669 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:44:01,037 - ERROR - Ошибка при отправке звонка: 401 Client Error: Unauthorized for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 23:44:24,753 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:44:24,754 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:44:37,453 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:44:37,479 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:44:37,705 - ERROR - Ошибка при отправке звонка: 401 Client Error: Unauthorized for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-03 23:45:32,261 - INFO - Подключение к базе данных установлено успешно.
+2024-11-03 23:45:32,262 - INFO - Подключение к базе данных успешно установлено.
+2024-11-03 23:45:40,785 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-03 23:45:40,809 - INFO - Цена лота '5' обновлена до 1.
+2024-11-03 23:45:41,032 - ERROR - Ошибка при отправке звонка: 401 Client Error: Unauthorized for url: https://zvonok.com/manager/cabapi_external/api/v1/phones/call/?public_key=762d0893fe38229fc98b45bff41756dc&phone=79871169415&campaign_id=1674057343&text=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BB%D0%BE%D1%82%D0%B0+%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D0%BB%D0%B0%D1%81%D1%8C.+%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC+%D0%B1%D0%BE%D1%82%D0%B5.&speaker=Tatyana
+2024-11-04 00:48:50,829 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:48:50,830 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 00:48:59,325 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:48:59,337 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:48:59,689 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103744926768
+2024-11-04 00:49:10,573 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:10,574 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:10,576 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:49:10,903 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103635167548
+2024-11-04 00:49:21,784 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:21,784 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:21,786 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:49:22,074 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 2411031713676111
+2024-11-04 00:49:34,426 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:34,433 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:49:34,739 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103516719091
+2024-11-04 00:49:45,687 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:45,690 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:49:46,022 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103264040343
+2024-11-04 00:49:58,518 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:58,518 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:49:58,521 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:49:58,857 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 2411031034725070
+2024-11-04 00:50:18,832 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:50:18,833 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 00:50:24,594 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:24,605 - INFO - Цена лота '5' обновлена до 9999999999999999.99.
+2024-11-04 00:50:24,929 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103250339721
+2024-11-04 00:50:37,312 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:37,312 - INFO - No price change for 5.
+2024-11-04 00:50:47,870 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:47,871 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:47,871 - INFO - No price change for 5.
+2024-11-04 00:50:59,937 - WARNING - Нет текущей цены для https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:59,937 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:50:59,937 - INFO - No price change for 5.
+2024-11-04 00:51:11,971 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:51:11,971 - INFO - No price change for 5.
+2024-11-04 00:51:30,728 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:51:30,728 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 00:51:38,846 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:51:38,856 - INFO - Цена лота '5' обновлена до 1.
+2024-11-04 00:51:39,154 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 241103191285924
+2024-11-04 00:51:51,677 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:51:51,678 - INFO - No price change for 5.
+2024-11-04 00:52:04,014 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:52:04,014 - INFO - No price change for 5.
+2024-11-04 00:52:10,106 - ERROR - Error parsing lot 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-04 00:53:44,226 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:53:44,226 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 00:53:52,275 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:53:52,285 - INFO - Цена лота '5' обновлена до 9999999999999999.99.
+2024-11-04 00:53:53,615 - INFO - Звонок успешно отправлен на номер 79871169415, Call ID: 2411031148189596
+2024-11-04 00:54:07,065 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:54:07,065 - INFO - No price change for 5.
+2024-11-04 00:54:19,758 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:54:19,758 - INFO - No price change for 5.
+2024-11-04 00:54:29,581 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:54:29,581 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 00:54:37,519 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:54:37,519 - INFO - No price change for 5.
+2024-11-04 00:54:47,951 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:54:49,546 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:54:49,546 - INFO - No price change for 5.
+2024-11-04 00:55:01,664 - INFO - Цена успешно получена для сайта: https://utp.sberbank-ast.ru/AP/NBT/PurchaseView/26/0/0/2429951
+2024-11-04 00:55:01,664 - INFO - No price change for 5.
+2024-11-04 00:55:01,844 - INFO - Лот с ID 5 успешно удален.
+2024-11-04 00:55:18,232 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:55:18,232 - INFO - No price change for 6.
+2024-11-04 00:55:35,808 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:55:35,808 - INFO - No price change for 6.
+2024-11-04 00:55:56,314 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:55:56,314 - INFO - No price change for 6.
+2024-11-04 00:56:19,209 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:56:19,209 - INFO - No price change for 6.
+2024-11-04 00:56:40,766 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 00:56:40,766 - INFO - No price change for 6.
+2024-11-04 00:56:45,513 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 00:56:45,513 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 01:05:28,586 - INFO - Подключение к базе данных установлено успешно.
+2024-11-04 01:05:28,586 - INFO - Подключение к базе данных успешно установлено.
+2024-11-04 01:05:59,596 - ERROR - Error parsing lot 6: Message: 
+Stacktrace:
+#0 0x63433892613a <unknown>
+#1 0x634338441460 <unknown>
+#2 0x63433848df96 <unknown>
+#3 0x63433848e221 <unknown>
+#4 0x6343384d35d4 <unknown>
+#5 0x6343384b203d <unknown>
+#6 0x6343384d0af6 <unknown>
+#7 0x6343384b1db3 <unknown>
+#8 0x634338480c10 <unknown>
+#9 0x634338481bee <unknown>
+#10 0x6343388f23cb <unknown>
+#11 0x6343388f6368 <unknown>
+#12 0x6343388dfeec <unknown>
+#13 0x6343388f6ee7 <unknown>
+#14 0x6343388c513f <unknown>
+#15 0x634338914858 <unknown>
+#16 0x634338914a20 <unknown>
+#17 0x634338924fb6 <unknown>
+#18 0x7e0a0929ca94 <unknown>
+#19 0x7e0a09329c3c <unknown>
+
+2024-11-04 01:06:22,557 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 01:06:22,558 - INFO - No price change for 6.
+2024-11-04 01:06:41,182 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 01:06:41,182 - INFO - No price change for 6.
+2024-11-04 01:07:02,638 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 01:07:02,638 - INFO - No price change for 6.
+2024-11-04 01:07:24,983 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 01:07:24,983 - INFO - No price change for 6.
+2024-11-04 01:07:47,499 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
+2024-11-04 01:07:47,499 - INFO - No price change for 6.

@@ -1,6 +1,7 @@
 from parsers.catalog_lot_online_parser import get_current_price as get_current_price_catalog_lot_online
 from parsers.rts_tender_parser import get_current_price as get_current_price_rts_tender
 from parsers.sberbank_parser import get_current_price as get_current_price_sberbank
+from logger_config import logger 
 
 class ParsersManager:
     def __init__(self):
@@ -14,9 +15,10 @@ class ParsersManager:
         for domain, parser in self.parsers.items():
             if domain in url:
                 return parser
-        raise ValueError(f"No parser available for URL: {url}")
+        raise ValueError(f"Нет доступного парсера для URL: {url}")
 
     async def get_price(self, url):
         parser = self.get_parser(url)
-
-        return await parser(url)
+        price = await parser(url)
+        logger.info(f"Цена успешно получена для сайта: {url}")
+        return price

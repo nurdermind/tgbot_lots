@@ -6,8 +6,7 @@ Base = declarative_base()
 class Lot(Base):
     __tablename__ = 'lots'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     url = Column(String, nullable=False, unique=True)
     current_price = Column(String, nullable=False)
     owner_id = Column(String, nullable=False)
