@@ -17,4 +17,8 @@ if not CALLER_API_KEY:
 
 CAMPAIGN_ID = os.getenv('CAMPAIGN_ID')
 if not CAMPAIGN_ID:
-    raise ValueError("No CAMPAIGN_ID set for the database connection")
+    raise ValueError("No CAMPAIGN_ID set")
+
+APP_URL = os.getenv('APP_URL')
+if not APP_URL:
+    raise ValueError("No APP_URL set")

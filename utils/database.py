@@ -76,4 +76,4 @@ def update_lot_price(lot, new_price):
             session.commit()
             logger.info(f"Цена лота '{lot.id}' обновлена до {new_price}.")
         else:
-            logger.error(f"Лот с ID {lot_id} не найден для обновления.")
+            logger.error(f"Лот с ID {lot.id} не найден для обновления.")

@@ -1,5 +1,20 @@
-from sqlalchemy import Column, Integer, String, Index
+from sqlalchemy import Index
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData
+from config import DATABASE_URL
+
+engine = create_engine(DATABASE_URL)
+metadata = MetaData()
+
+lots_table = Table(
+    'lots', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('url', String, nullable=False),
+    Column('current_price', String),
+    Column('owner_id', Integer),
+)
+
+metadata.create_all(engine)
 
 Base = declarative_base()
 

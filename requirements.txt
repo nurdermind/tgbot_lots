@@ -4,3 +4,8 @@ python-telegram-bot
 SQLAlchemy
 beautifulsoup4
 requests
+colorlog
+python-dotenv
+psycopg2-binary
+python-telegram-bot[webhooks]
+alembic
