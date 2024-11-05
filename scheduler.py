@@ -27,7 +27,7 @@ async def parse_lot(session, lot_id):
             await update_lot_price_async(lot, new_price)
 
             lots_cache[lot.id].current_price = new_price
-            await make_call('79871169415', 'Цена лота изменилась. Подробности в телеграмм боте.')
+            await make_call()
             await send_telegram_message(lot.owner_id, message)
         else:
             logger.info(f"No price change for {lot.id}.")

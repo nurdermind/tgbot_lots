@@ -15,10 +15,14 @@ CALLER_API_KEY = os.getenv('CALLER_API_KEY')
 if not CALLER_API_KEY:
     raise ValueError("No CALLER_API_KEY set for Telegram bot")
 
-CAMPAIGN_ID = os.getenv('CAMPAIGN_ID')
-if not CAMPAIGN_ID:
-    raise ValueError("No CAMPAIGN_ID set")
-
 APP_URL = os.getenv('APP_URL')
 if not APP_URL:
     raise ValueError("No APP_URL set")
+
+TO_PHONE = os.getenv('TO_PHONE')
+if not TO_PHONE:
+    raise ValueError("No TO_PHONE set")
+
+FROM_PHONE = os.getenv('FROM_PHONE')
+if not FROM_PHONE:
+    raise ValueError("No FROM_PHONE set")

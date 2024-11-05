@@ -10,11 +10,9 @@ from logger_config import logger
 
 COOKIES_PATH = "cookies.pkl"
 
-
 def save_cookies(driver, file_path):
     with open(file_path, "wb") as file:
         pickle.dump(driver.get_cookies(), file)
-
 
 def load_cookies(driver, file_path):
     try:

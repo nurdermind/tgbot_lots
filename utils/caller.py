@@ -1,35 +1,33 @@
-import requests
+import httpx
 from logger_config import logger
-from config import CALLER_API_KEY, CAMPAIGN_ID
+from config import CALLER_API_KEY, TO_PHONE, FROM_PHONE
 
-CALLTOOLS_BASE_URL = 'https://zvonok.com'
-CALLTOOLS_TIMEOUT = 30
+async def make_call():
+    url = "https://lk.zvonobot.ru/apiCalls/create"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = {
+        "apiKey": CALLER_API_KEY,
+        "phone": TO_PHONE,
+        "outgoingPhone": FROM_PHONE,
+        "record": {
+            "text": (
+                "Цена лота изменилась. Подробная информация отправлена в телеграмм бот. "
+                "Можете выключить звонок, так как текст дальше предназначен для того чтобы "
+                "сделать аудиосообщение большим"
+            ),
+            "gender": 1
+        }
+    }
 
-async def make_call(phonenumber, text, speaker='Tatyana'):
     try:
-        resp = requests.get(
-            f'{CALLTOOLS_BASE_URL}/manager/cabapi_external/api/v1/phones/call/',
-            params={
-                'public_key': CALLER_API_KEY,
-                'phone': phonenumber,
-                'campaign_id': CAMPAIGN_ID,
-                'text': text,
-                'speaker': speaker,
-            },
-            timeout=CALLTOOLS_TIMEOUT
-        )
-        
-        resp.raise_for_status()
-        ret = resp.json()
-        
-        if 'status' in ret and ret['status'] == 'error':
-            logger.error(f"Ошибка при отправке звонка: {ret['data']}")
-            raise Exception(ret['data'])
-        
-        if 'call_id' in ret:
-            logger.info(f"Звонок успешно отправлен на номер {phonenumber}, Call ID: {ret['call_id']}")
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=data, headers=headers)
+
+        if response.status_code == 200:
+            logger.info("Вызов успешно создан.")
         else:
-            logger.warning("Неожиданный ответ от сервера без call_id.")
-    
-    except requests.exceptions.RequestException as e:
-        logger.error(f"Ошибка при отправке звонка: {e}")
+            logger.error(f"Ошибка при создании вызова: {response.status_code} - {response.text}")
+    except Exception as e:
+        logger.exception(f"Не удалось выполнить вызов: {e}")

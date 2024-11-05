@@ -1,11 +1,12 @@
 from logger_config import logger
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.exc import OperationalError
+from sqlalchemy.exc import OperationalError, IntegrityError
 from models.lot import Base, Lot
 from config import DATABASE_URL
 from parsers.parsers_manager import ParsersManager
 import asyncio
+from psycopg2.errors import UniqueViolation
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
@@ -34,9 +35,19 @@ async def add_lot(url, owner_id):
         manager = ParsersManager()
         initial_price = await manager.get_price(url)
         new_lot = Lot(url=url, current_price=initial_price, owner_id=owner_id)
-        session.add(new_lot)
-        session.commit()
-        return new_lot.id
+        try:
+            session.add(new_lot)
+            session.commit()
+            logger.info(f"Лот с URL {url} успешно добавлен в базу данных.")
+            return new_lot.id
+        except IntegrityError as e:
+            session.rollback()
+            if isinstance(e.orig, UniqueViolation):
+                logger.warning(f"Лот с URL {url} уже существует в базе данных.")
+                return f"Лот с URL {url} уже существует в базе данных."
+            else:
+                logger.error(f"Ошибка при добавлении лота: {e}")
+                raise
 
 def delete_lot_from_db(lot_id):
     from scheduler import lots_cache
