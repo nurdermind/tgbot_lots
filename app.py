@@ -1,7 +1,6 @@
 import threading
 from bot.handlers import setup_bot
 from scheduler import run_scheduler
-from config import TELEGRAM_TOKEN, APP_URL
 
 if __name__ == '__main__':
     application = setup_bot()
