@@ -30,13 +30,12 @@ async def parse_lot(session, lot_id):
             await make_call()
             await send_telegram_message(lot.owner_id, message)
         else:
-            logger.info(f"No price change for {lot.id}.")
+            logger.info(f"Цена не изменилась для лота '{lot.id}'.")
     except Exception as e:
-        logger.error(f"Error parsing lot {lot_id}: {e}")
+        logger.error(f"Ошибка при парсинге лота '{lot_id}': {e}")
         session.rollback()
     finally:
         session.commit()
-
 
 async def scheduled_task():
     while True:
@@ -48,7 +47,7 @@ async def scheduled_task():
 
         await asyncio.sleep(5)
 
-
 def run_scheduler():
     load_lots_to_cache()
     asyncio.run(scheduled_task())
+    manager.shutdown()

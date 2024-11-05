@@ -22,10 +22,7 @@ def check_db_connection():
         return False
     return True
 
-if check_db_connection():
-    logger.info("Подключение к базе данных успешно установлено.")
-else:
-    logger.error("Не удалось подключиться к базе данных.")
+check_db_connection()
 
 def init_db():
     Base.metadata.create_all(engine)

@@ -1,7 +1,16 @@
+import asyncio
+from concurrent.futures import ProcessPoolExecutor
 from parsers.catalog_lot_online_parser import get_current_price as get_current_price_catalog_lot_online
 from parsers.rts_tender_parser import get_current_price as get_current_price_rts_tender
 from parsers.sberbank_parser import get_current_price as get_current_price_sberbank
-from logger_config import logger 
+from logger_config import logger
+import os
+
+def run_async_parser_sync(parser, url):
+    logger.info(f"Процесс {os.getpid()} начал парсинг для {url}")
+    result = asyncio.run(parser(url))
+    logger.info(f"Процесс {os.getpid()} завершил парсинг для {url}")
+    return result
 
 class ParsersManager:
     def __init__(self):
@@ -10,6 +19,7 @@ class ParsersManager:
             'i.rts-tender.ru': get_current_price_rts_tender,
             'utp.sberbank-ast.ru': get_current_price_sberbank,
         }
+        self.executor = ProcessPoolExecutor()
 
     def get_parser(self, url):
         for domain, parser in self.parsers.items():
@@ -19,6 +29,15 @@ class ParsersManager:
 
     async def get_price(self, url):
         parser = self.get_parser(url)
-        price = await parser(url)
+        loop = asyncio.get_running_loop()
+
+        if asyncio.iscoroutinefunction(parser):
+            price = await loop.run_in_executor(self.executor, run_async_parser_sync, parser, url)
+        else:
+            price = await loop.run_in_executor(self.executor, parser, url)
+
         logger.info(f"Цена успешно получена для сайта: {url}")
         return price
+
+    def shutdown(self):
+        self.executor.shutdown()
