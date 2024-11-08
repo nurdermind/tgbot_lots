@@ -11,9 +11,9 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 if not DATABASE_URL:
     raise ValueError("No DATABASE_URL set for the database connection")
 
-CALLER_API_KEY = os.getenv('CALLER_API_KEY')
-if not CALLER_API_KEY:
-    raise ValueError("No CALLER_API_KEY set for Telegram bot")
+SMS_API_KEY = os.getenv('SMS_API_KEY')
+if not SMS_API_KEY:
+    raise ValueError("No SMS_API_KEY set for Telegram bot")
 
 APP_URL = os.getenv('APP_URL')
 if not APP_URL:
