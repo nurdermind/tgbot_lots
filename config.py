@@ -22,7 +22,3 @@ if not APP_URL:
 TO_PHONE = os.getenv('TO_PHONE')
 if not TO_PHONE:
     raise ValueError("No TO_PHONE set")
-
-FROM_PHONE = os.getenv('FROM_PHONE')
-if not FROM_PHONE:
-    raise ValueError("No FROM_PHONE set")
