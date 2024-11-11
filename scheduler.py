@@ -22,6 +22,7 @@ async def parse_lot(session, lot_id):
     try:
         lot = session.query(type(lots_cache[lot_id])).get(lot_id)
         new_price = await manager.get_price(lot.url)
+        mew_price = '123'
 
         if new_price is not None and new_price != lot.current_price:
             message = f"Цена лота, который находится по ссылке '{lot.url}' изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
