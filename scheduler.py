@@ -1,12 +1,11 @@
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql.functions import random
-import random
 from utils.database import get_all_lots, update_lot_price_async, engine
 from parsers.parsers_manager import ParsersManager
 from logger_config import logger
 import asyncio
 from utils.notifier import send_telegram_message
 from utils.caller import send_sms
+from config import TELEGRAM_IDS
 
 manager = ParsersManager()
 SessionLocal = sessionmaker(bind=engine)
@@ -30,7 +29,9 @@ async def parse_lot(session, lot_id):
 
             lots_cache[lot.id].current_price = new_price
             await send_sms(message)
-            await send_telegram_message(lot.owner_id, message)
+
+            for chat_id in TELEGRAM_IDS.split(","):
+                await send_telegram_message(chat_id, message)
         else:
             logger.info(f"Цена не изменилась для лота '{lot.id}'.")
     except Exception as e:

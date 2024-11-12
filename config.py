@@ -22,3 +22,7 @@ if not APP_URL:
 TO_PHONE = os.getenv('TO_PHONE')
 if not TO_PHONE:
     raise ValueError("No TO_PHONE set")
+
+TELEGRAM_IDS = os.getenv('TELEGRAM_IDS')
+if not TELEGRAM_IDS:
+    raise ValueError("No TELEGRAM_IDS set")
