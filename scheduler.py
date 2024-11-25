@@ -26,7 +26,7 @@ async def parse_lot(session, lot_id):
         if new_price is not None and new_price != lot.current_price:
             url = await shorten_link_tly(lot.url)
 
-            tg_message = f"Цена лота {url} изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
+            tg_message = f"Цена лота {lot.url} изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
             sms_message = f"'{url}' Б:{lot.current_price}.С:{new_price}"
 
             if len(sms_message) >= 70:
