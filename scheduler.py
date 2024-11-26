@@ -6,7 +6,7 @@ from logger_config import logger
 import asyncio
 from utils.notifier import send_telegram_message
 from utils.caller import send_sms
-from config import TELEGRAM_IDS, TLY_API
+from config import TELEGRAM_IDS
 
 manager = ParsersManager()
 SessionLocal = sessionmaker(bind=engine)
@@ -24,7 +24,7 @@ async def parse_lot(session, lot_id):
         new_price = await manager.get_price(lot.url)
 
         if new_price is not None and new_price != lot.current_price:
-            url = await shorten_link_tly(lot.url)
+            url = await shorten_link_custom_service(lot.url)
 
             tg_message = f"Цена лота {lot.url} изменилась! Старая цена: {lot.current_price}, новая цена: {new_price}"
             sms_message = f"'{url}' Б:{lot.current_price}.С:{new_price}"
@@ -57,14 +57,10 @@ async def scheduled_task():
 
         await asyncio.sleep(5)
 
-async def shorten_link_tly(long_url):
-    api_url = "https://t.ly/api/v1/link/shorten"
+async def shorten_link_custom_service(long_url):
+    api_url = "https://shyller.space/shorten"  # Ваш сервис
     headers = {"Content-Type": "application/json"}
-    data = {
-        "long_url": long_url,
-        "domain": "https://t.ly",
-        "api_token": TLY_API
-    }
+    data = {"long_url": long_url}
 
     async with aiohttp.ClientSession() as session:
         async with session.post(api_url, json=data, headers=headers) as response:
@@ -72,7 +68,7 @@ async def shorten_link_tly(long_url):
                 short_url = await response.json()
                 return short_url.get("short_url")
             else:
-                logger.error("Ошибка:", await response.text())
+                logger.error("Ошибка при сокращении URL:", await response.text())
                 return None
 
 def run_scheduler():

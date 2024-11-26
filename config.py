@@ -26,7 +26,3 @@ if not TO_PHONE:
 TELEGRAM_IDS = os.getenv('TELEGRAM_IDS')
 if not TELEGRAM_IDS:
     raise ValueError("No TELEGRAM_IDS set")
-
-TLY_API = os.getenv('TLY_API')
-if not TLY_API:
-    raise ValueError("No TLY_API set")
