@@ -12,6 +12,6 @@ def setup_bot():
     application.add_handler(CommandHandler("delete", delete_lot))
     application.add_handler(CommandHandler("all", all_lots))
 
-    application.add_handler(CallbackQueryHandler(button_handler))
+    application.add_handler(CallbackQueryHandler(button_handler, pattern=".*"))
 
     return application
