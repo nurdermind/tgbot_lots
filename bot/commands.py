@@ -110,12 +110,3 @@ async def delete_lot(update: Update, context: CallbackContext):
         await update.message.reply_text(f'Лот с ID {lot_id} успешно удален.', reply_markup=get_main_keyboard())
     else:
         await update.message.reply_text(f'Лот с ID {lot_id} не найден.', reply_markup=get_main_keyboard())
-
-async def all_lots(update: Update, _: CallbackContext):
-    lots = get_all_lots_ids_and_urls()
-    if not lots:
-        await update.message.reply_text("Нет доступных лотов.")
-        return
-
-    message = "\n".join([f"ID: `{lot.id}`, URL: {lot.url}" for lot in lots])
-    await update.message.reply_text(message, reply_markup=get_main_keyboard())
