@@ -5,6 +5,7 @@ from logger_config import logger
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
 import telegram
+import asyncio
 
 def get_main_keyboard():
     keyboard = [
@@ -58,11 +59,14 @@ async def show_all_lots(query, context):
     message = "\n".join([f"ID: `{lot.id}`, URL: {lot.url}" for lot in lots])
 
     max_length = 4096
-    if len(message) > max_length:
-        for i in range(0, len(message), max_length):
-            await query.edit_message_text(message[i:i + max_length], reply_markup=get_main_keyboard())
-    else:
-        await query.edit_message_text(message, reply_markup=get_main_keyboard())
+    message_parts = [message[i:i + max_length] for i in range(0, len(message), max_length)]
+
+    for idx, part in enumerate(message_parts):
+        if idx == len(message_parts) - 1:
+            await query.message.reply_text(part, reply_markup=get_main_keyboard())
+        else:
+            await query.message.reply_text(part)
+            await asyncio.sleep(0.1)
 
 async def create_lot(update: Update, context: CallbackContext):
     from scheduler import lots_cache
