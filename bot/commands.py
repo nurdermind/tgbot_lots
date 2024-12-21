@@ -56,7 +56,13 @@ async def show_all_lots(query, context):
         return
 
     message = "\n".join([f"ID: `{lot.id}`, URL: {lot.url}" for lot in lots])
-    await query.edit_message_text(message, reply_markup=get_main_keyboard())
+
+    max_length = 4096
+    if len(message) > max_length:
+        for i in range(0, len(message), max_length):
+            await query.edit_message_text(message[i:i + max_length], reply_markup=get_main_keyboard())
+    else:
+        await query.edit_message_text(message, reply_markup=get_main_keyboard())
 
 async def create_lot(update: Update, context: CallbackContext):
     from scheduler import lots_cache
