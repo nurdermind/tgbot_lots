@@ -1,22 +1,26 @@
+import asyncio
+
 import aiohttp
 from sqlalchemy.orm import sessionmaker
-from utils.database import get_all_lots, update_lot_price_async, engine
-from parsers.parsers_manager import ParsersManager
-from logger_config import logger
-import asyncio
-from utils.notifier import send_telegram_message
-from utils.caller import send_sms
+
 from config import TELEGRAM_IDS
+from logger_config import logger
+from parsers.parsers_manager import ParsersManager
+from utils.caller import send_sms
+from utils.database import engine, get_all_lots, update_lot_price_async
+from utils.notifier import send_telegram_message
 
 manager = ParsersManager()
 SessionLocal = sessionmaker(bind=engine)
 
 lots_cache = {}
 
+
 def load_lots_to_cache():
     global lots_cache
     lots = get_all_lots()
     lots_cache = {lot.id: lot for lot in lots}
+
 
 async def parse_lot(session, lot_id):
     try:
@@ -47,6 +51,7 @@ async def parse_lot(session, lot_id):
     finally:
         session.commit()
 
+
 async def scheduled_task():
     while True:
         load_lots_to_cache()
@@ -56,6 +61,7 @@ async def scheduled_task():
             await asyncio.gather(*tasks)
 
         await asyncio.sleep(5)
+
 
 async def shorten_link_custom_service(long_url):
     api_url = "https://shyller.space/shorten"  # Ваш сервис
@@ -70,6 +76,7 @@ async def shorten_link_custom_service(long_url):
             else:
                 logger.error("Ошибка при сокращении URL:", await response.text())
                 return None
+
 
 def run_scheduler():
     load_lots_to_cache()

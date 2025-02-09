@@ -1,10 +1,13 @@
 import asyncio
+import os
 from concurrent.futures import ProcessPoolExecutor
+
+from logger_config import logger
 from parsers.catalog_lot_online_parser import get_current_price as get_current_price_catalog_lot_online
+from parsers.roseltorg import get_current_price as get_current_price_roseltorg
 from parsers.rts_tender_parser import get_current_price as get_current_price_rts_tender
 from parsers.sberbank_parser import get_current_price as get_current_price_sberbank
-from logger_config import logger
-import os
+
 
 def run_async_parser_sync(parser, url):
     logger.info(f"Процесс {os.getpid()} начал парсинг для {url}")
@@ -12,12 +15,14 @@ def run_async_parser_sync(parser, url):
     logger.info(f"Процесс {os.getpid()} завершил парсинг для {url}")
     return result
 
+
 class ParsersManager:
     def __init__(self):
         self.parsers = {
             'catalog.lot-online.ru': get_current_price_catalog_lot_online,
             'i.rts-tender.ru': get_current_price_rts_tender,
             'utp.sberbank-ast.ru': get_current_price_sberbank,
+            '178fz.roseltorg.ru': get_current_price_roseltorg,
         }
         self.executor = ProcessPoolExecutor()
 
