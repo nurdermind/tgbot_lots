@@ -50,16 +50,13 @@ def fetch_page_with_selenium(url):
             EC.presence_of_element_located((By.XPATH, EXPLAIN_PATH))
         )
         procedure_requests = [r for r in driver.requests if 'action=Procedure.load' in r.url]
-        logger.info(procedure_requests)
         if not procedure_requests:
             logger.error(f"Произошла ошибка при запросе лотов {url}: {procedure_requests=}")
             return None
-        headers = json.loads(procedure_requests[0].body)['headers']
+        headers = procedure_requests[0].headers
         token = json.loads(procedure_requests[0].body)['token']
-        logger.info(f"Procedure request {token}, {headers}")
         response_data = json.loads(procedure_requests[0].response.body)
         lots_data = response_data['result']['procedure']['lots']
-        logger.info(lots_data)
         return lots_data, token, headers
     except Exception as e:
         logger.error(f"Произошла ошибка при парсинге цены с {url}: {e}")
