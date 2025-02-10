@@ -33,6 +33,8 @@ services:
     ports:
       - "8443:8443"
     restart: unless-stopped
+    volumes:
+      - .:/app
     networks:
       - local
 
