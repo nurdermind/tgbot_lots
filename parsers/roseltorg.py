@@ -10,7 +10,7 @@ from selenium_stealth import stealth
 from logger_config import logger
 
 URL_PATTERN = 'https://178fz.roseltorg.ru/#com/applic/trade/lot/%s/procedure/%s'
-EXPLAIN_PATH = "//*[contains(@href, '#com/procedure/showexplain/procedure/')]"
+EXPLAIN_PATH = "//*[contains(@href, '/#com/applic/create/lot/')]"
 PRICE_PATH = "//*[text()='Последнее ценовое предложение:']/../div/div"
 
 
@@ -44,8 +44,8 @@ def fetch_page_with_selenium(url):
             EC.presence_of_element_located((By.XPATH, EXPLAIN_PATH))
         )
         explain_url = driver.find_element(By.XPATH, EXPLAIN_PATH).get_attribute('href')
-        explain_url = explain_url.split('#com/procedure/showexplain/procedure/')[-1]
-        lot_url = URL_PATTERN % (explain_url.split('/')[2], explain_url.split('/')[0])
+        explain_url = explain_url.split('/#com/applic/create/lot/')[-1]
+        lot_url = URL_PATTERN % (explain_url.split('/')[0], explain_url.split('/')[2])
         driver.get(lot_url)
         logger.info(lot_url)
         WebDriverWait(driver, 20).until(
