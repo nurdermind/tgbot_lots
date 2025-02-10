@@ -649,3 +649,28 @@ Stacktrace:
 2024-11-04 01:07:24,983 - INFO - No price change for 6.
 2024-11-04 01:07:47,499 - INFO - Цена успешно получена для сайта: https://i.rts-tender.ru/main/auction/Trade/Privatization/View.aspx?Id=182703&Guid=ab992958-30c8-4185-9ee8-e4e71627a3e7#374210
 2024-11-04 01:07:47,499 - INFO - No price change for 6.
+2025-02-09 14:47:45,055 - ERROR - Произошла ошибка при парсинге цены с https://178fz.roseltorg.ru/#com/procedure/view/procedure/548614: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010afffbc8 chromedriver + 5766088
+1   chromedriver                        0x000000010aff77ea chromedriver + 5732330
+2   chromedriver                        0x000000010aae5680 chromedriver + 415360
+3   chromedriver                        0x000000010ab36d7d chromedriver + 748925
+4   chromedriver                        0x000000010ab36f21 chromedriver + 749345
+5   chromedriver                        0x000000010ab87184 chromedriver + 1077636
+6   chromedriver                        0x000000010ab5d07d chromedriver + 905341
+7   chromedriver                        0x000000010ab843e7 chromedriver + 1065959
+8   chromedriver                        0x000000010ab5ce23 chromedriver + 904739
+9   chromedriver                        0x000000010ab28bea chromedriver + 691178
+10  chromedriver                        0x000000010ab29d41 chromedriver + 695617
+11  chromedriver                        0x000000010afc3100 chromedriver + 5517568
+12  chromedriver                        0x000000010afc7040 chromedriver + 5533760
+13  chromedriver                        0x000000010afa4c87 chromedriver + 5393543
+14  chromedriver                        0x000000010afc7acb chromedriver + 5536459
+15  chromedriver                        0x000000010af93544 chromedriver + 5322052
+16  chromedriver                        0x000000010afe56e8 chromedriver + 5658344
+17  chromedriver                        0x000000010afe58af chromedriver + 5658799
+18  chromedriver                        0x000000010aff73c8 chromedriver + 5731272
+19  libsystem_pthread.dylib             0x00007ff80f9aa253 _pthread_start + 99
+20  libsystem_pthread.dylib             0x00007ff80f9a5bef thread_start + 15
+
+2025-02-09 14:47:45,168 - INFO - None

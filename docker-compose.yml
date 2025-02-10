@@ -15,8 +15,10 @@ services:
     environment:
       TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
       DATABASE_URL: ${DATABASE_URL}
+    env_file:
+      - .env
     depends_on:
       - db
     ports:
       - "8443:8443"
-    restart: always
+    restart: unless-stopped
