@@ -38,3 +38,6 @@ services:
 
 networks:
   local:
+
+volumes:
+  postgres_data:
