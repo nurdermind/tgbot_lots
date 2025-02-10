@@ -1,11 +1,13 @@
+import json
 import re
 import time
 
-from selenium import webdriver
+import requests
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium_stealth import stealth
+from seleniumwire import webdriver
 
 from logger_config import logger
 
@@ -26,7 +28,11 @@ def fetch_page_with_selenium(url):
              "profile.managed_default_content_settings.stylesheets": 2,
              "profile.managed_default_content_settings.javascript": 1}
     options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options,
+                              seleniumwire_options={
+                                  'enable_har': True,
+                                  'disable_encoding': True
+                              })
 
     stealth(driver,
             languages=["en-US", "en"],
@@ -43,16 +49,18 @@ def fetch_page_with_selenium(url):
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, EXPLAIN_PATH))
         )
-        explain_url = driver.find_element(By.XPATH, EXPLAIN_PATH).get_attribute('href')
-        explain_url = explain_url.split('/#com/applic/create/lot/')[-1]
-        lot_url = URL_PATTERN % (explain_url.split('/')[0], explain_url.split('/')[2])
-        driver.get(lot_url)
-        logger.info(lot_url)
-        WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.XPATH, PRICE_PATH))
-        )
-        time.sleep(3)
-        return driver.find_element(By.XPATH, PRICE_PATH).text
+        procedure_requests = [r for r in driver.requests if 'action=Procedure.load' in r.url]
+        logger.info(procedure_requests)
+        if not procedure_requests:
+            logger.error(f"Произошла ошибка при запросе лотов {url}: {procedure_requests=}")
+            return None
+        headers = json.loads(procedure_requests[0].body)['headers']
+        token = json.loads(procedure_requests[0].body)['token']
+        logger.info(f"Procedure request {token}, {headers}")
+        response_data = json.loads(procedure_requests[0].response.body)
+        lots_data = response_data['result']['procedure']['lots']
+        logger.info(lots_data)
+        return lots_data, token, headers
     except Exception as e:
         logger.error(f"Произошла ошибка при парсинге цены с {url}: {e}")
         return None
@@ -66,15 +74,37 @@ def clean_price(price_text):
 
 
 async def get_current_price(url):
-    raw_price_text = fetch_page_with_selenium(url)
-    logger.info(raw_price_text)
-    if not raw_price_text:
+    result = fetch_page_with_selenium(url)
+    if result is None:
+        return None
+    lots_data, token, headers = result
+    try:
+        lot_position = int(url.split('#')[-1])
+    except Exception as e:
+        logger.error(f"Ошибка при получении позиции лота из URL {url}: {e}")
         return None
 
-    price = clean_price(raw_price_text)
-
-    if price:
-        return price
-    else:
-        logger.warning(f'Нет текущей цены для {url}')
-        return None
+    lot_data = lots_data[lot_position-1]
+    request_data = {
+        "action": "Applic",
+        "method": "loadForTrade",
+        "data": [
+            {
+                "procedure_id": lot_data['procedure_id'],
+                "lot_id": lot_data['id']
+            }
+        ],
+        "type": "rpc",
+        "tid": 3,
+        "token": token
+    }
+    r = requests.post(
+        url='https://178fz.roseltorg.ru/index.php?rpctype=direct&module=default&action=Applic.loadForTrade',
+        headers=headers,
+        json=request_data,
+        timeout=10,
+        allow_redirects=True,
+    )
+    r.raise_for_status()
+    data = r.json()['result']
+    return data['last_offer']['price']
