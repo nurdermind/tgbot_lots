@@ -1,35 +1,25 @@
-import time
-import pickle
-from selenium import webdriver
-from selenium_stealth import stealth
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import re
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium_stealth import stealth
+
 from logger_config import logger
 
-COOKIES_PATH = "cookies.pkl"
+PRICE_PATH_PATTERN = "//*[@id='tblBidsbody']/tr[%s]//td[contains(text(), 'Последнее предложение о цене')]/following::span"
 
-def save_cookies(driver, file_path):
-    with open(file_path, "wb") as file:
-        pickle.dump(driver.get_cookies(), file)
 
-def load_cookies(driver, file_path):
-    try:
-        with open(file_path, "rb") as file:
-            cookies = pickle.load(file)
-            for cookie in cookies:
-                driver.add_cookie(cookie)
-    except FileNotFoundError:
-        logger.warning("Файл с cookies не найден")
-
-def fetch_page_with_selenium(url):
+def fetch_page_with_selenium(url, lot_number=1):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36")
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36")
     prefs = {"profile.managed_default_content_settings.images": 2,
              "profile.managed_default_content_settings.stylesheets": 2,
              "profile.managed_default_content_settings.javascript": 1}
@@ -46,26 +36,18 @@ def fetch_page_with_selenium(url):
             )
 
     driver.get(url)
-    # load_cookies(driver, COOKIES_PATH)
-    # driver.refresh()
 
     try:
-        WebDriverWait(driver, 60).until(
-            EC.presence_of_element_located((By.TAG_NAME, "body"))
+        price_path = PRICE_PATH_PATTERN % lot_number
+        WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, price_path))
         )
-        time.sleep(5)
-
-        WebDriverWait(driver, 30).until(
-            EC.presence_of_element_located((By.TAG_NAME, "body"))
-        )
-
-        # save_cookies(driver, COOKIES_PATH)
-
-        html = driver.page_source
+        return driver.find_element(price_path).text
+    except Exception as e:
+        logger.error(f'Ошибка при получении текущей цены: {e}')
+        return None
     finally:
         driver.quit()
-
-    return html
 
 
 def clean_price(price_text):
@@ -75,17 +57,11 @@ def clean_price(price_text):
     return price_text
 
 
-async def get_current_price(url):
-    html = fetch_page_with_selenium(url)
+async def get_current_price(url, lot_number=1):
+    price_text = fetch_page_with_selenium(url, lot_number)
 
-    if not html:
-        return None
-
-    match = re.search(r"<BidLastPriceOffer>([\d,.]+)</BidLastPriceOffer>", html)
-    if match:
-        price_text = match.group(1).replace(',', '.')
-        
-        return price_text
-    else:
+    if not price_text:
         logger.warning(f'Нет текущей цены для {url}')
         return None
+
+    return clean_price(price_text)
