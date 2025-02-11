@@ -46,8 +46,8 @@ def fetch_page_with_selenium(url):
             )
 
     driver.get(url)
-    load_cookies(driver, COOKIES_PATH)
-    driver.refresh()
+    # load_cookies(driver, COOKIES_PATH)
+    # driver.refresh()
 
     try:
         WebDriverWait(driver, 60).until(
@@ -59,7 +59,7 @@ def fetch_page_with_selenium(url):
             EC.presence_of_element_located((By.TAG_NAME, "body"))
         )
 
-        save_cookies(driver, COOKIES_PATH)
+        # save_cookies(driver, COOKIES_PATH)
 
         html = driver.page_source
     finally:
