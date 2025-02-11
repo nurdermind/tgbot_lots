@@ -14,7 +14,7 @@ PRICE_PATH_PATTERN = "//*[@id='tblBidsbody']/tr[%s]//td[contains(text(), 'Пос
 
 def fetch_page_with_selenium(url, lot_number=1):
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
