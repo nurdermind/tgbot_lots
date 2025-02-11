@@ -10,7 +10,7 @@ services:
       - "5432:5432"
     restart: always
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB" ]
       interval: 5s
@@ -21,6 +21,7 @@ services:
 
 
   bot:
+    command: bash -c "alembic upgrade head && python app.py"
     build: .
     environment:
       TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
@@ -40,6 +41,3 @@ services:
 
 networks:
   local:
-
-volumes:
-  postgres_data:
