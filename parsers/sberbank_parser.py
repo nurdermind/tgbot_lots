@@ -14,7 +14,7 @@ PRICE_PATH_PATTERN = "//*[@id='tblBidsbody']/tr[%s]//td[contains(text(), 'Пос
 
 def fetch_page_with_selenium(url, lot_number=1):
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
@@ -39,10 +39,12 @@ def fetch_page_with_selenium(url, lot_number=1):
 
     try:
         price_path = PRICE_PATH_PATTERN % lot_number
+        print(price_path)
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, price_path))
         )
-        return driver.find_element(price_path).text
+        # time.sleep(2)  # ждем пока страница загрузится полностью
+        return driver.find_element(By.XPATH, price_path).text
     except Exception as e:
         logger.error(f'Ошибка при получении текущей цены: {e}')
         return None
