@@ -59,7 +59,12 @@ def clean_price(price_text):
     return price_text
 
 
-async def get_current_price(url, lot_number=1):
+async def get_current_price(url):
+    try:
+        lot_number = int(url.split('#')[-1])
+    except Exception as e:
+        logger.error(f"Ошибка при получении позиции лота из URL {url}: {e}")
+        return None
     price_text = fetch_page_with_selenium(url, lot_number)
 
     if not price_text:
