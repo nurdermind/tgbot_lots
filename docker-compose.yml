@@ -6,8 +6,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: price_tracker_db
-    ports:
-      - "5432:5432"
     restart: always
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
