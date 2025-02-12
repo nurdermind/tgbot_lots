@@ -1,15 +1,19 @@
-import time
-from selenium import webdriver
-from selenium_stealth import stealth
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-from logger_config import logger
 import re
+import time
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium_stealth import stealth
+
+from logger_config import logger
+
+PRICE_PATH_PATTERN = """//table[@id="jqgLots"]//tr[@id][%s]//td[@aria-describedby='jqgLots_BestApplicationQuotationStr']"""
 
 
-def fetch_page_with_selenium(url):
+def fetch_page_with_selenium(url, lot_number=1):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")
@@ -31,10 +35,10 @@ def fetch_page_with_selenium(url):
 
     try:
         time.sleep(10)
-
+        price_path = PRICE_PATH_PATTERN % lot_number
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located(
-                (By.CSS_SELECTOR, "td[aria-describedby='jqgLots_BestApplicationQuotationStr']"))
+                (By.XPATH, price_path))
         )
 
         html = driver.page_source
@@ -43,14 +47,21 @@ def fetch_page_with_selenium(url):
 
     return html
 
+
 def clean_price(price_text):
     price_text = re.sub(r'[^0-9.]', '', price_text)
     if price_text.endswith('.'):
         price_text = price_text[:-1]
     return price_text
 
+
 async def get_current_price(url):
-    html = fetch_page_with_selenium(url)
+    try:
+        lot_number = int(url.split('#')[-1])
+    except Exception as e:
+        logger.error(f"Ошибка при получении позиции лота из URL {url}: {e}")
+        return None
+    html = fetch_page_with_selenium(url, lot_number)
 
     if not html:
         return None
@@ -59,7 +70,7 @@ async def get_current_price(url):
 
     try:
         price_element = soup.find('td', {'aria-describedby': 'jqgLots_BestApplicationQuotationStr'})
-        
+
         if price_element and price_element.get('title'):
             price_text = price_element['title'].strip().replace(' ', '').replace(',', '.')
             price_text = clean_price(price_text)
