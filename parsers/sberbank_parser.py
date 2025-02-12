@@ -39,10 +39,10 @@ def fetch_page_with_selenium(url, lot_number=1):
 
     try:
         price_path = PRICE_PATH_PATTERN % lot_number
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.XPATH, price_path))
         )
-        time.sleep(2)  # ждем пока страница загрузится полностью
+        time.sleep(5)  # ждем пока страница загрузится полностью
         return driver.find_element(By.XPATH, price_path).text
     except Exception as e:
         logger.error(f'Ошибка при получении текущей цены: {e}')
